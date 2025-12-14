@@ -90,7 +90,7 @@ jobs:
               $matKhau = $env:CUSTOM_RDP_PASS
               Write-Host "│ ℹ️  Dùng mật khẩu tùy chỉnh từ env" -ForegroundColor Blue
           } else {
-              $matKhau = New-Password
+              $matKhau = $env:CUSTOM_RDP_PASS
           }
 
           $securePass = ConvertTo-SecureString $matKhau -AsPlainText -Force
