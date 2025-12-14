@@ -86,12 +86,12 @@ jobs:
           Write-Host "👤 ĐANG TẠO TÀI KHOẢN" -ForegroundColor Yellow
           
           # Nếu người dùng đặt mật khẩu tùy chỉnh (ví dụ bằng secret) thì ưu tiên dùng
-          if ($env:CUSTOM_RDP_PASS -and $env:CUSTOM_RDP_PASS.Length -ge 6) {
-         $matKhau = $env:CUSTOM_RDP_PASS
-         Write-Host "│ 🔐 Dùng mật khẩu từ CUSTOM_RDP_PASS" -ForegroundColor Blue
-         } else {
-         Write-Host "│ ❌ CUSTOM_RDP_PASS không tồn tại hoặc quá ngắn" -ForegroundColor Red
-         exit 1
+         if ($env:CUSTOM_RDP_PASS -and $env:CUSTOM_RDP_PASS.Length -ge 6) {
+            $matKhau = $env:CUSTOM_RDP_PASS
+            Write-Host "│ 🔐 Dùng mật khẩu từ CUSTOM_RDP_PASS" -ForegroundColor Blue
+            } else {
+            Write-Host "│ ❌ CUSTOM_RDP_PASS không tồn tại hoặc quá ngắn" -ForegroundColor Red
+            exit 1
          }
 
           $securePass = ConvertTo-SecureString $matKhau -AsPlainText -Force
