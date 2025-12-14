@@ -37,7 +37,7 @@ jobs:
           }
           Write-Host "`r✅ Hệ thống đã sẵn sàng!                    " -ForegroundColor Green
 
-      # CẤU HÌNH NÂNG CAO
+         # CẤU HÌNH NÂNG CAO
       - name: 🔧 CẤU HÌNH HỆ THỐNG
         run: |
           Write-Host ""
