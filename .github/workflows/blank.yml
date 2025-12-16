@@ -12,11 +12,10 @@ on:
         - '1h'
         - '3h' 
         - '5h40m'
-        - '8h'
 
 jobs:
   Premium-RDP-Setup:
-    runs-on: windows-2019
+    runs-on: windows-2025
     timeout-minutes: 340
     
     steps:
